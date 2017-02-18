@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:layout_gravity="center"
@@ -7,34 +8,64 @@
 
 
     <ImageView
-        android:layout_width="168dp"
-        android:layout_height="242dp"
-        android:src="@drawable/newcc"
-        android:id="@+id/image"
-        android:layout_alignParentBottom="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginBottom="299dp"
-        android:foregroundGravity="center_vertical"/>
-
-    <EditText
-        android:layout_width="180dp"
-        android:layout_height="80dp"
-        android:hint="Username"
-        android:layout_marginBottom="195dp"
-        android:layout_alignParentBottom="true"
-        android:layout_alignLeft="@+id/image"
-        android:layout_alignStart="@+id/image" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        app:srcCompat="@mipmap/ic_ctk"
+        android:id="@+id/imageView2"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_above="@+id/editText3"/>
 
     <EditText
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
+        android:layout_height="40dp"
+        android:layout_marginTop="30dp"
+        android:inputType="textPersonName"
+        android:textAlignment="center"
+        android:background="@color/back"
+        android:hint="Username"
+        android:ems="10"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="206dp"
+        android:id="@+id/editText3"
+        android:gravity="center_horizontal" />
+
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:background="@color/back"
         android:hint="Password"
+        android:inputType="textPassword"
+        android:textAlignment="center"
+        android:gravity="center_horizontal"
+        android:foregroundGravity="center_vertical"
         android:ems="10"
         android:layout_marginTop="56dp"
-        android:id="@+id/editText3"
-        android:layout_below="@+id/editText2"
-        android:layout_alignParentLeft="true"
-        android:layout_alignParentStart="true" />
+        android:id="@+id/editText4"
+        android:layout_alignTop="@+id/editText3"
+        android:layout_alignLeft="@+id/editText3"
+        android:layout_alignStart="@+id/editText3"/>
 
+    <Button
+        android:text="Sign In"
+        android:background="@color/button"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/editText4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="23dp"
+        android:id="@+id/button" />
+
+    <TextView
+        android:text="Forgot Password ?"
+        android:textColor="@color/red"
+        android:textStyle="italic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="16dp"
+        android:id="@+id/textView" />
 </RelativeLayout>
