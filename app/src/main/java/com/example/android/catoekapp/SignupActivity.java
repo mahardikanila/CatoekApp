@@ -8,6 +8,16 @@ public class SignupActivity extends AppCompatActivity {
     String username, password, fullname, email, address;
     int phone_number;
 
+    @Override
+    protected void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
+        setContentView(R.layout.activity_signup);
+    }
+
+    public SignupActivity(){
+
+    }
+
     public SignupActivity(String address, String email, String fullname, String password, int phone_number, String username) {
         this.address = address;
         this.email = email;
@@ -65,9 +75,5 @@ public class SignupActivity extends AppCompatActivity {
         this.username = username;
     }
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_signup);
-    }
+
 }
